@@ -2,8 +2,10 @@ package com.modul.sportkalender.task;
 
 import com.modul.sportkalender.event.Event;
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,5 +16,4 @@ public class Task {
     @ManyToOne
     private Event event;
 
-    // Getter & Setter
 }
