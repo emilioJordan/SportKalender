@@ -1,6 +1,10 @@
 server:
   port: 9090
 
+springdoc:
+  swagger-ui:
+    path: /
+
 spring:
   jpa:
     show-sql: true
