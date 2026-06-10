@@ -3,10 +3,11 @@ server:
 
 springdoc:
   swagger-ui:
-    path: /
+    path: /swagger-ui.html
 
 spring:
   jpa:
+    open-in-view: false
     show-sql: true
     generate-ddl: true
     hibernate:
@@ -26,3 +27,5 @@ spring:
 
 app:
   name: sportkalender
+  security:
+    client-id: sportkalender-frontend
