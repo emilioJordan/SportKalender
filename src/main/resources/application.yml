@@ -1,0 +1,31 @@
+server:
+  port: 9090
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+spring:
+  jpa:
+    open-in-view: false
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/m-295-app
+    username: postgres
+    password: Postgres
+    driverClassName: org.postgresql.Driver
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/Sportkalender
+
+app:
+  name: sportkalender
+  security:
+    client-id: sportkalender-frontend
